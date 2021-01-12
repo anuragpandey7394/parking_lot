@@ -9,7 +9,7 @@ module.exports = class ManageParkingSpace {
      * function to add Capacity 
      */
     addCapacity(capacity){
-      if(!Number.isInteger(capacity)){
+      if(!Number.isInteger(Number.parseInt((capacity)))){
          throw new Error('invalid Input');
       }
       this.#capacity = capacity;
@@ -36,7 +36,7 @@ module.exports = class ManageParkingSpace {
      * @param {number} time 
      */
     removeCar(parkedCarNumber, time) {
-        if(!Number.isInteger(time)){
+        if(!Number.isInteger(Number.parseInt(time))){
             throw new Error('invalid Input');
          }
         let carParked = false;
